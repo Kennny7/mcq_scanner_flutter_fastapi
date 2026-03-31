@@ -1,12 +1,16 @@
 # 📱 MCQ Scanner: Flutter + FastAPI
 
-
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green?logo=fastapi)](https://fastapi.tiangolo.com/) ![Flutter](https://img.shields.io/badge/Flutter-3.27-blue?logo=flutter)](https://flutter.dev/) ![Dart](https://img.shields.io/badge/Dart-3.6-blue?logo=dart)](https://dart.dev/) ![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green?logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Flutter](https://img.shields.io/badge/Flutter-3.27-blue?logo=flutter)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/Dart-3.6-blue?logo=dart)](https://dart.dev/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A modern mobile application that scans MCQ questions from an image, extracts text using OCR, and returns possible answers using a FastAPI backend.
 
+</div>
 
 
 ---
@@ -58,6 +62,8 @@ sequenceDiagram
     FastAPI-->>Flutter: JSON (question, options, answers, confidence)
     Flutter->>User: Display results
 
+```
+
 ---
 
 
@@ -68,7 +74,7 @@ sequenceDiagram
 
 ```bash
 
-mcq\_scanner\_flutter\_fastapi/
+mcq_scanner_flutter_fastapi
 ├── .git
 │   ├── HEAD
 │   ├── config
@@ -101,17 +107,17 @@ mcq\_scanner\_flutter\_fastapi/
 │   ├── caches
 │   │   └── deviceStreaming.xml
 │   ├── deviceManager.xml
-│   ├── mcq\_scanner\_flutter\_fastapi.iml
+│   ├── mcq_scanner_flutter_fastapi.iml
 │   ├── modules.xml
 │   └── workspace.xml
 ├── README.md
-├── backend\_fastapi
+├── backend_fastapi
 │   ├── .env
 │   ├── .gitignore
 │   ├── Dockerfile
 │   ├── app
-│   │   ├── \_\_init\_\_.py
-│   │   ├── \_\_pycache\_\_
+│   │   ├── __init__.py
+│   │   ├── __pycache__
 │   │   ├── core
 │   │   ├── main.py
 │   │   ├── models
@@ -123,13 +129,13 @@ mcq\_scanner\_flutter\_fastapi/
 │       ├── Lib
 │       ├── Scripts
 │       └── pyvenv.cfg
-└── frontend\_flutter
-        ├── .dart\_tool
+└── frontend_flutter
+        ├── .dart_tool
 		│   ├── dartpad
-		│   ├── flutter\_build
-		│   ├── hooks\_runner
-		│   ├── package\_config.json
-		│   ├── package\_graph.json
+		│   ├── flutter_build
+		│   ├── hooks_runner
+		│   ├── package_config.json
+		│   ├── package_graph.json
 		│   └── version
 		├── .env
 		├── .flutter-plugins-dependencies
@@ -141,14 +147,14 @@ mcq\_scanner\_flutter\_fastapi/
 		│   └── workspace.xml
 		├── .metadata
 		├── README.md
-		├── analysis\_options.yaml
+		├── analysis_options.yaml
 		├── android
 		│   ├── .gitignore
 		│   ├── .gradle
 		│   ├── .kotlin
 		│   ├── app
 		│   ├── build.gradle.kts
-		│   ├── frontend\_flutter\_android.iml
+		│   ├── frontend_flutter_android.iml
 		│   ├── gradle
 		│   ├── gradle.properties
 		│   ├── gradlew
@@ -162,17 +168,17 @@ mcq\_scanner\_flutter\_fastapi/
 		│   ├── .cxx
 		│   ├── app
 		│   ├── b2f7e7edd35b3c8d4f463bb8b035ecd8.cache.dill.track.dill
-		│   ├── camera\_android\_camerax
-		│   ├── flutter\_assets
-		│   ├── flutter\_native\_splash
-		│   ├── flutter\_plugin\_android\_lifecycle
-		│   ├── image\_picker\_android
-		│   ├── native\_assets
-		│   ├── native\_hooks
-		│   ├── path\_provider\_android
-		│   ├── permission\_handler\_android
+		│   ├── camera_android_camerax
+		│   ├── flutter_assets
+		│   ├── flutter_native_splash
+		│   ├── flutter_plugin_android_lifecycle
+		│   ├── image_picker_android
+		│   ├── native_assets
+		│   ├── native_hooks
+		│   ├── path_provider_android
+		│   ├── permission_handler_android
 		│   └── reports
-		├── frontend\_flutter.iml
+		├── frontend_flutter.iml
 		├── ios
 		│   ├── .gitignore
 		│   ├── Flutter
@@ -201,7 +207,7 @@ mcq\_scanner\_flutter\_fastapi/
 		├── pubspec.lock
 		├── pubspec.yaml
 		├── test
-		│   └── widget\_test.dart
+		│   └── widget_test.dart
 		├── web
 		│   ├── favicon.png
 		│   ├── icons
@@ -252,9 +258,9 @@ mcq\_scanner\_flutter\_fastapi/
 
 ```bash
 
-git clone https://github.com/Kennny7/mcq\_scanner\_flutter\_fastapi.git
+git clone https://github.com/Kennny7/mcq_scanner_flutter_fastapi.git
 
-cd mcq\_scanner\_flutter\_fastapi/backend\_fastapi
+cd mcq_scanner_flutter_fastapi\backend_fastapi
 
 ```
 
@@ -268,7 +274,7 @@ cd mcq\_scanner\_flutter\_fastapi/backend\_fastapi
 
 python -m venv venv
 
-venv\\Scripts\\activate
+venv\Scripts\activate
 
 
 
@@ -294,19 +300,17 @@ pip install -r requirements.txt
 
 ### 4. Set up environment variables
 
-Create a `.env` file in `backend\_fastapi/` (copy from `.env.example` if present):
+Create a `.env` file in `backend_fastapi/` (copy from `.env.example` if present):
 
 ```env
 
-OCR\_SPACE\_API\_KEY=your\_ocr\_space\_key\_here
-
-OCR\_CONFIDENCE\_THRESHOLD=0.5
-
-MAX\_SEARCH\_RESULTS=3
-
-SEARCH\_TIMEOUT=15
-
-LOG\_LEVEL=INFO
+OCR_SPACE_API_KEY=your_ocr_space_key_here
+GEMINI_API_KEY=your_gemini_api_key_here
+OCR_CONFIDENCE_THRESHOLD=0.5
+MAX_SEARCH_RESULTS=3
+SEARCH_TIMEOUT=15
+GEMINI_MODEL=gemini-2.5-flash-lite
+LOG_LEVEL=INFO
 
 ```
 
@@ -350,7 +354,7 @@ Open your browser at [http://localhost:8000/docs](http://localhost:8000/docs). T
 
 ```bash
 
-cd ../frontend\_flutter
+cd ../frontend_flutter
 
 ```
 
@@ -368,13 +372,13 @@ flutter pub get
 
 ### 3. Configure backend URL
 
-Create a `.env` file in `frontend\_flutter/` (or edit `lib/services/api\_service.dart` directly for development):
+Create a `.env` file in `frontend_flutter/` (or edit `lib/services/api_service.dart` directly for development):
 
 ```env
 
-API\_BASE\_URL=http://10.0.2.2:8000   # Android emulator
+API_BASE_URL=http://10.0.2.2:8000   # Android emulator
 
-# API\_BASE\_URL=http://192.168.x.x:8000   # Physical device (use your local IP)
+# API_BASE_URL=http://192.168.x.x:8000   # Physical device (use your local IP)
 
 ```
 
@@ -400,7 +404,7 @@ flutter devices
 
 # Run on a specific device
 
-flutter run -d <device\_id>
+flutter run -d <device_id>
 
 ```
 
@@ -430,11 +434,11 @@ The app will start and ask for camera permissions.
 
 ### 2. Add app icon and splash screen
 
-We use the `flutter\_native\_splash` package. After adding it to `pubspec.yaml`, run:
+We use the `flutter_native_splash` package. After adding it to `pubspec.yaml`, run:
 
 ```bash
 
-flutter pub run flutter\_native\_splash:create
+flutter pub run flutter_native_splash:create
 
 ```
 
@@ -476,15 +480,15 @@ The APK will be located at `build/app/outputs/flutter-apk/app-release.apk`.
 
 |----------|-------------|
 
-| `OCR\_SPACE\_API\_KEY` | Your OCR.space API key (required). |
+| `OCR_SPACE_API_KEY` | Your OCR.space API key (required). |
 
-| `OCR\_CONFIDENCE\_THRESHOLD` | Minimum confidence score (0–1) to accept OCR text. |
+| `OCR_CONFIDENCE_THRESHOLD` | Minimum confidence score (0–1) to accept OCR text. |
 
-| `MAX\_SEARCH\_RESULTS` | Number of search results to analyze. |
+| `MAX_SEARCH_RESULTS` | Number of search results to analyze. |
 
-| `SEARCH\_TIMEOUT` | Timeout for web requests in seconds. |
+| `SEARCH_TIMEOUT` | Timeout for web requests in seconds. |
 
-| `LOG\_LEVEL` | Logging level (`INFO`, `DEBUG`, etc.). |
+| `LOG_LEVEL` | Logging level (`INFO`, `DEBUG`, etc.). |
 
 
 
@@ -494,11 +498,11 @@ The APK will be located at `build/app/outputs/flutter-apk/app-release.apk`.
 
 |----------|-------------|
 
-| `API\_BASE\_URL` | Full URL of the FastAPI backend (e.g., `http://10.0.2.2:8000`). |
+| `API_BASE_URL` | Full URL of the FastAPI backend (e.g., `http://10.0.2.2:8000`). |
 
 
 
-> The frontend reads this via `flutter\_dotenv`. Make sure to include `.env` in `.gitignore` to avoid exposing secrets.
+> The frontend reads this via `flutter_dotenv`. Make sure to include `.env` in `.gitignore` to avoid exposing secrets.
 
 
 
@@ -560,7 +564,7 @@ curl -X POST http://localhost:8000/api/process-image -F "file=@/path/to/your/ima
 
 
 
-1\. Open the `frontend\_flutter` folder in Android Studio as a Flutter project.
+1\. Open the `frontend_flutter` folder in Android Studio as a Flutter project.
 
 2\. Use the **Device Manager** to create an Android emulator (API 34+).
 
@@ -620,14 +624,16 @@ This project is licensed under the **MIT License**. See the \[LICENSE](LICENSE) 
 
 ## 🔗 Useful Links
 
-
-
 <div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge\&logo=python)](https://www.python.org/) ![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green?style=for-the-badge\&logo=fastapi)](https://fastapi.tiangolo.com/) ![Flutter](https://img.shields.io/badge/Flutter-3.27-blue?style=for-the-badge\&logo=flutter)](https://flutter.dev/) ![Dart](https://img.shields.io/badge/Dart-3.6-blue?style=for-the-badge\&logo=dart)](https://dart.dev/) ![OCR.space](https://img.shields.io/badge/OCR.space-API-orange?style=for-the-badge)](https://ocr.space/) ![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=for-the-badge\&logo=github)](https://github.com/Kennny7/mcq\_scanner\_flutter\_fastapi)
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Flutter](https://img.shields.io/badge/Flutter-3.27-blue?style=for-the-badge&logo=flutter)](https://flutter.dev/)
+[![Dart](https://img.shields.io/badge/Dart-3.6-blue?style=for-the-badge&logo=dart)](https://dart.dev/)
+[![OCR.space](https://img.shields.io/badge/OCR.space-API-orange?style=for-the-badge)](https://ocr.space/)
+[![GitHub](https://img.shields.io/badge/GitHub-Repo-black?style=for-the-badge&logo=github)](https://github.com/Kennny7/mcq_scanner_flutter_fastapi)
 
 </div>
-
 
 
 ---
