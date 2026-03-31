@@ -1,0 +1,39 @@
+name: frontend_flutter
+description: MCQ Scanner Flutter App
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.11.0+1
+  image_picker: ^1.1.2
+  http: ^1.2.2
+  permission_handler: ^11.3.1
+  path_provider: ^2.1.4
+  path: ^1.9.0
+  flutter_dotenv: ^5.1.0
+  flutter_spinkit: ^5.2.1
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.4.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
+    - assets/icon/app_icon.png
+    - assets/splash/splash.png
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: assets/icon/app_icon.png
+
+flutter_native_splash:
+  color: "#000000"
+  image: assets/splash/splash.png
+  android: true
+  ios: false
